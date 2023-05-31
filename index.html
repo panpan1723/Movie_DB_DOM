@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie DB DOM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css"
+        integrity="sha512-JApjWRnfonFeGBY7t4yq8SWr1A6xVYEJgO/UMIYONxaR3C9GETKUg0LharbJncEzJF5Nmiv+Pr5QNulr81LjGQ=="
+        crossorigin="anonymous"
+    />
+</head>
+<body>
+    
+    <header>
+        <div class="header-left">
+            <img class="header-logo" src="static/logo.svg" alt="logo">
+
+            <select id="categories">
+                <option value="popular">Popular</option>
+                <option value="now-playing">Now playing</option>
+                <option value="top-rated">Top rated</option>
+                <option value="up-coming">Up coming</option>
+            </select>
+        </div>
+
+        <div class="header-right">
+            <ul class="tab-buttons">
+                <li id="button-home" class="tab-button active" onclick="openTab('home')">HOME</li>
+                <li id="button-liked" class="tab-button" onclick="openTab('liked')">LIKED</li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="home" class="tab-content active">
+            <div class="pagination">
+                <button id="prev">prev</button>
+                <div id="page"></div>
+                <button id="next">next</button>
+            </div>
+
+            <div class="movie-container">
+
+            </div>
+        </div>
+
+        <div id="liked" class="tab-content">
+            <div class="liked-container">
+
+            </div>
+        </div>
+
+        <div class="modal" id="modal">
+            <div class="modal-backdrop" id="modal-backdrop"></div>
+            <div class="modal-content">
+              <span class="modal-close" id="modal-close">&times;</span>
+              <div class="movie-detail" id="movie-detail">
+  
+              </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
